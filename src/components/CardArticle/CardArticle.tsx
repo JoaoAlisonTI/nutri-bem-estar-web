@@ -38,8 +38,8 @@ export default function CardArticle(){
   return (
       <>
         {arrayArticles.map((article) => (
-          <div key={article.id} className="w-auto max-w-2xl mb-10 rounded">
-          <img className="w-full rounded-tl rounded-tr" src={article.imgSrc} alt={article.imgAlt} />
+          <div key={article.id} className="w-auto max-w-[18rem] mr-3 ml-3 mb-10 rounded">
+          <img className="w-full max-h-[14rem] rounded-tl rounded-tr" src={article.imgSrc} alt={article.imgAlt} />
           <div className="w-full p-3 bg-white rounded-bl rounded-br">
             <h2 className="text-2xl text-lime-600">{article.title}</h2>
             <p>

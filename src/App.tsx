@@ -1,5 +1,10 @@
 import Header from './components/Header/Header'
 import CardArticle from './components/CardArticle/CardArticle'
+import CardContacts from './components/CardContacts/CardContacts'
+import Footer from './components/Footer/Footer'
+import { BsWhatsapp } from 'react-icons/bs'
+import { HiOutlineMail } from 'react-icons/hi'
+import { GrLocation } from 'react-icons/gr'
 
 function App() {
 
@@ -14,10 +19,31 @@ function App() {
           <p>Saúde e Qualidade de Vida</p>
          </span>
          </div>
-         <section className="w-full mt-12 p-3 bg-slate-200 flex flex-wrap items-center justify-center">
-         <h1 className="mb-12 text-3xl text-lime-500 font-bold text-center">ARTIGOS</h1>
+         <section className="w-full mt-12 p-3 bg-slate-200">
+         <h1 className="mb-12 text-3xl text-lime-500 font-bold text-center">SERVIÇOS</h1>
+          <div className="w-full flex flex-wrap justify-center">
           <CardArticle />
+          </div>
          </section>
+         <section className="w-full p-3">
+          <h1 className="text-3xl text-lime-500 font-bold text-center">AGENDE SUA CONSULTA</h1>
+          <CardContacts 
+            icon={BsWhatsapp}
+            title="Mande uma mensagem"
+            subtitle="(21)9999-9999"
+          />
+          <CardContacts 
+            icon={HiOutlineMail}
+            title="Nós envie um e-mail"
+            subtitle="nutribem@gmail.com"
+          />
+          <CardContacts 
+            icon={GrLocation}
+            title="Onde estamos"
+            subtitle="Av. Exemplo Número 501"
+          />
+         </section>
+        <Footer />
       </main>
     </>
   )
